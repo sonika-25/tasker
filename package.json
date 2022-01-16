@@ -1,0 +1,21 @@
+{
+  "name": "motify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@harmony-js/core": "^0.1.57",
+    "@harmony-js/utils": "^0.1.56",
+    "@openzeppelin/contracts": "^4.4.1",
+    "@truffle/hdwallet-provider": "^2.0.0",
+    "create-react-app": "^5.0.0",
+    "dotenv": "^12.0.3",
+    "path": "^0.12.7",
+    "web3": "^1.6.1"
+  }
+}

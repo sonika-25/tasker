@@ -68,53 +68,7 @@ module.exports = {
          websockets: true
 
      },
-     testnet : {
-      network_id:'2',
-      provider : () => {
-        const truffleProvider = new TruffleProvider (
-          'https://api.s0.b.hmny.io',
-          {mnemonic: mnemonic},
-          {shardId : 0, chainId :2},
-        )
-        const newAcc = truffleProvider.addByPrivateKey(privateKey);
-        truffleProvider.setSigner(newAcc);
-        return truffleProvider;
-      }
-    },
 
-    harmony: {
-      provider: () => {
-        return new HDWalletProvider(
-          privateKey,
-          'https://api.s0.b.hmny.io',
-        );
-      },
-      network_id: 1666700000
-    },
-
-    harmonymain : {
-      provider : () => {
-        return new HDWalletProvider (
-          privateKey,
-          "https://api.harmony.one",
-        );
-      },
-      network_id: 1666600000
-    },
-    testnetHar: {
-      provider: () => {
-        if (!privateKeyTest.trim()) {
-          throw new Error(
-            'Please enter a private key with funds, you can use the default one'
-          );
-        }
-        return new HDWalletProvider({
-          privateKeys: [privateKeyTest],
-          providerOrUrl: 'https://api.s0.b.hmny.io',
-        });
-      },
-      network_id: 1666700000,
-    },
     // Another network with more advanced options...
     // advanced: {
     // port: 8777,             // Custom port
